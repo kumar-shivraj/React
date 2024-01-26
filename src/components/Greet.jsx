@@ -9,7 +9,9 @@
 // ==========  understanding props ==========
 
 const Greet = (props) => {
-  console.log(props);
+  const { name, heroName } = props;
+  // const Greet = ({name, heroName}) => {
+  // console.log(props);
   //  props.name="Shivraj"; //  it will give error as props are immutable
   //   return <h1>Hello Shivraj!</h1>;
   //   return <h1>Hello props.name</h1>;
@@ -38,10 +40,12 @@ const Greet = (props) => {
 
   return (
     <div>
-      <h1>
+      {/* <h1>
         Hello {props.name} a.k.a {props.heroName}
+      </h1> */}
+      <h1>
+        Hello {name} a.k.a {heroName}
       </h1>
-      {props.children}
     </div>
   );
 };

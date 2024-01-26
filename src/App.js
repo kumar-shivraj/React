@@ -1,5 +1,8 @@
 import "./App.css";
-import Message from "./components/Message";
+import ClassClick from "./components/ClassClick";
+import FunctionClick from "./components/FunctionClick";
+// import Counter from "./components/Counter";
+// import Message from "./components/Message";
 // import Greet from "./components/Greet";
 // import Welcome from "./components/Welcome";
 // import Hello from "./components/Hello";
@@ -7,25 +10,43 @@ import Message from "./components/Message";
 function App() {
   return (
     <div className="App">
+      {/* ========================  understanding destructuring props and state =============================== */}
+
+      <FunctionClick />
+      <ClassClick />
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  understanding destructuring props and state =============================== */}
+
+      {/* <Greet name="Bruce" heroName="Batman" /> */}
+      {/* <Greet name="Clark" heroName="Superman" /> */}
+      {/* <Welcome name="Bruce" heroName="Batman" /> */}
+      {/* <Welcome name="Clark" heroName="Superman" /> */}
+      {/* <Welcome name="Diana" heroName="Wonder woman" /> */}
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  understanding setState  =================================================== */}
+
+      {/* <Counter /> */}
+
+      {/* ===================================================================================================== */}
+
       {
-        //  =================================================================================================
-      }
-      {
-        // ======== understanding state ===========
+        // ======== understanding state =============================================================================
       }
 
-      <Message />
+      {/* <Message /> */}
 
       {
-        // ======== understanding state ends===========
+        // ======== understanding state ends  =======================================================================
       }
 
-      {
-        //  =================================================================================================
-      }
+      {/*  ================================== understanding props  ===========================================*/}
       {/*
       {
-        // ======== understanding props ===========
+        // ========  ===========
       }
 
       <Greet name="Bruce" heroName="Batman" />
@@ -50,17 +71,12 @@ function App() {
       <Welcome name="Clark" heroName="Superman" />
       <Welcome name="Diana" heroName="Wonder woman" />
       
-
-      {
-        // ======== understanding props ends===========
-      }
-      {
-        //  =================================================================================================
-      }
       */}
 
+      {/*  ===============================================================================================*/}
+
       {
-        //============= Basic understanding ============
+        //==================================== Basic understanding =======================================
       }
       {/*
         <Greet />
@@ -68,7 +84,7 @@ function App() {
         <Hello />
       */}
       {
-        //============= Basic understanding ends ============
+        //======================================= Basic understanding ends ================================
       }
     </div>
   );
