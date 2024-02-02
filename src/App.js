@@ -1,6 +1,9 @@
 import "./App.css";
-import ClassClick from "./components/ClassClick";
-import FunctionClick from "./components/FunctionClick";
+import Welcome1 from "./components/Welcome1";
+// import Greet1 from "./components/Greet1";
+// import Counter1 from "./components/Counter1";
+// import ClassClick from "./components/ClassClick";
+// import FunctionClick from "./components/FunctionClick";
 // import Counter from "./components/Counter";
 // import Message from "./components/Message";
 // import Greet from "./components/Greet";
@@ -10,10 +13,26 @@ import FunctionClick from "./components/FunctionClick";
 function App() {
   return (
     <div className="App">
+      {/* ========================  destructuring props  =============================== */}
+
+      {/* <Greet1 name="Bruce" heroName="Batman" /> */}
+      {/* <Greet1 name="Clark" heroName="Superman" /> */}
+      <Welcome1 name="Bruce" heroName="Batman" />
+      <Welcome1 name="Clark" heroName="Superman" />
+      {/* <Welcome name="Diana" heroName="Wonder woman" /> */}
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  understanding setState in class Component =============================== */}
+
+      {/* <Counter1 /> */}
+
+      {/* ===================================================================================================== */}
+
       {/* ========================  understanding destructuring props and state =============================== */}
 
-      <FunctionClick />
-      <ClassClick />
+      {/* <FunctionClick /> */}
+      {/* <ClassClick /> */}
 
       {/* ===================================================================================================== */}
 
