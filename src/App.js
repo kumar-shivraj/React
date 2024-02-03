@@ -1,5 +1,8 @@
 import "./App.css";
-import Welcome1 from "./components/Welcome1";
+import EventBind from "./components/EventBind";
+// import ClassClick1 from "./components/ClassClick1";
+// import FunctionClick1 from "./components/FunctionClick1";
+// import Welcome1 from "./components/Welcome1";
 // import Greet1 from "./components/Greet1";
 // import Counter1 from "./components/Counter1";
 // import ClassClick from "./components/ClassClick";
@@ -13,12 +16,26 @@ import Welcome1 from "./components/Welcome1";
 function App() {
   return (
     <div className="App">
+      {/* ========================  Binding event handler  =============================== */}
+
+      <EventBind />
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  event handling  =============================== */}
+
+      {/* <FunctionClick1 /> */}
+      {/* <ClassClick1 /> */}
+
+      {/* ===================================================================================================== */}
+
       {/* ========================  destructuring props  =============================== */}
 
       {/* <Greet1 name="Bruce" heroName="Batman" /> */}
       {/* <Greet1 name="Clark" heroName="Superman" /> */}
-      <Welcome1 name="Bruce" heroName="Batman" />
-      <Welcome1 name="Clark" heroName="Superman" />
+
+      {/* <Welcome1 name="Bruce" heroName="Batman" />
+      <Welcome1 name="Clark" heroName="Superman" /> */}
       {/* <Welcome name="Diana" heroName="Wonder woman" /> */}
 
       {/* ===================================================================================================== */}
