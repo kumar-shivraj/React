@@ -1,5 +1,9 @@
 import "./App.css";
-import EventBind from "./components/EventBind";
+import NameList2 from "./components/NameList2";
+// import NameList from "./components/NameList";
+// import UserGreeting from "./components/UserGreeting";
+// import ParentComponent from "./components/ParentComponent";
+// import EventBind from "./components/EventBind";
 // import ClassClick1 from "./components/ClassClick1";
 // import FunctionClick1 from "./components/FunctionClick1";
 // import Welcome1 from "./components/Welcome1";
@@ -16,9 +20,28 @@ import EventBind from "./components/EventBind";
 function App() {
   return (
     <div className="App">
+      {/* ========================  List Rendering  =============================== */}
+
+      {/* <NameList /> */}
+      <NameList2 />
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  Method as props, child can pass the data to parent  =============================== */}
+
+      {/* <UserGreeting /> */}
+
+      {/* ===================================================================================================== */}
+
+      {/* ========================  Method as props, child can pass the data to parent  =============================== */}
+
+      {/* <ParentComponent /> */}
+
+      {/* ===================================================================================================== */}
+
       {/* ========================  Binding event handler  =============================== */}
 
-      <EventBind />
+      {/* <EventBind /> */}
 
       {/* ===================================================================================================== */}
 
