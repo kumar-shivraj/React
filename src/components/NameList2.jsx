@@ -16,7 +16,7 @@ function NameList2() {
       skill: "Java",
     },
     {
-      id: 1,
+      id: 3,
       name: "Rajan",
       age: 26,
       skill: "Javascript",
@@ -29,7 +29,16 @@ function NameList2() {
   //     </h2>
   //   ));
 
-  const personList = persons.map((person) => <Person person={person} />);
+  // create a seperate component for a list item. It will be having better code readablity.
+  // here Person component is created a seperate list item for every person
+  // const personList = persons.map((person) => (
+  //   <Person key={person.name} person={person} />
+  // ));
+
+  // key props are not accessible in child component
+  const personList = persons.map((person) => (
+    <Person key={person.id} person={person} />
+  ));
 
   return <div>{personList}</div>;
 }
