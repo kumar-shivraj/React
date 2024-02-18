@@ -1,5 +1,10 @@
 import "./App.css";
-import LifeCycleC from "./components/LifeCycleC";
+import ParentComponentOne from "./components/ParentComponentOne";
+import ParentComponentTwo from "./components/ParentComponentTwo";
+import PureComp from "./components/PureComp";
+// import FragmentDemo from "./components/FragmentDemo";
+// import Table from "./components/Table";
+// import LifeCycleC from "./components/LifeCycleC";
 // import LifeCycleA from "./components/LifeCycleA";
 // import Form from "./components/Form";
 // import styles from "./components/appStyles.module.css";
@@ -29,6 +34,56 @@ import LifeCycleC from "./components/LifeCycleC";
 function App() {
   return (
     <div className="App">
+      {/* ========================  react fragment  =============================== */}
+      {/* regular component does not implement the "shouldComponentUpdate" method. It always returns true by default */}
+      {/* pure component on the other hand implements shouldComponentUpdate with a shallow props and state comparison */}
+      {/* 
+      shallow comparison(SC) :
+      for premitive types : a (SC) b returns true if a and b have the same value and are of the same type ex : string "Shivraj" (SC) string "Shivraj" returns true
+      for complex types : a (SC) b returns true if a and b reference the exact same object. 
+      ex :
+      ============== premitivs ==================
+      var a = [1, 2, 3];
+      var b = [1, 2, 3];
+      var c = a;
+
+      var ab_eq = (a === b);  // false
+      var ac_eq = (a === c);  // true
+      ===========================================
+
+      =================== objects ===============
+      var a = {x: 1, y:2};
+      var b = {x: 1, y:2};
+      var c = a;
+      
+      var ab_eq = (a === b);  // false
+      var ac_eq = (a === c);  // true
+      ===========================================
+
+      */}
+      {/* 
+      pure component implements "shouldComponentUpdate" method with a shallow prop and state comparison 
+      it does the shallow comparison of : 
+      prevState with currentState and
+      prevProps with currentProps
+      and only if shallow comparison indicates if there is differenct, the component will re-render
+      */}
+
+      {/* it is a good idea to ensure that all the children components are also pure to avoid unexpected behaviours */}
+      {/* <PureComp /> */}
+      {/* <ParentComponentOne /> */}
+      <ParentComponentTwo />
+      {/* we should not mutate the objects or arrays in props and state. For example
+      if we want to add a new item to the list, don't mutate it by pushing the
+      item in the list, reference to the array never changes and because pure
+      components only check for that, the component won't re-render even if
+      there is difference. always return a new object or array when dealing with
+      pure components. */}
+      {/* ===================================================================================================== */}
+      {/* ========================  react fragment  =============================== */}
+      {/* <FragmentDemo /> */}
+      {/* <Table /> */}
+      {/* ===================================================================================================== */}
       {/* ========================  Lifecycle Methods in Class Components  =============================== */}
       {/* 
       we can mainly classify the Lifecycle methods in below 4 phases 
@@ -93,7 +148,6 @@ function App() {
       {/* ================================== updating lifecycle method ======================================== */}
       {/* Order of execution : 
           getDerivedStateFromProps => shouldComponentUpdate => render =>  getSnapShotBeforeUpdate =>  compnentDidUpdate   */}
-
       {/* 
         (i). getDerivedStateFromProps(props, state)
         *   method is called every time a component is re-rendered
@@ -118,13 +172,11 @@ function App() {
             calling any set state methods 
         * rarely used lifecycle method 
       */}
-
       {/* (iii). render() :
        *   only require method
        *   Read props and state and return JSX
        *   Do not change the state or interact with DOM or make AJAX call
        *   Children components lifecycle methods are also executed */}
-
       {/* 
       (iv). getSnapShotBeforeUpdate(prevProps, prevState) :
       *   it receives the updated props and state as parameters 
@@ -141,11 +193,9 @@ function App() {
       *   cause side effects => but before making the call, need to compare the prev props and new props and then decide whether to 
           make the network request or not to avoid unnecessary network call
       */}
-      <LifeCycleC />
-
+      {/* <LifeCycleC /> */}
       {/* ======================================================== ======================================== */}
       {/* ================================== unmounting lifecycle method ======================================== */}
-
       {/* 
           (i). componentWillMount()
           *   method is invoked immediately before a component is unmounted and destroyed
@@ -156,9 +206,7 @@ function App() {
           *   Do not call setState method here. cz component is never re-rendered once it is unmounted
          */}
       {/* ======================================================== ======================================== */}
-
       {/* ================================== error handling lifecycle method ======================================== */}
-
       {/* 
           (i).  static getDerivedStateFromError(error)
           (ii). componentDidCatch(error, info)
@@ -169,7 +217,6 @@ function App() {
 
          */}
       {/* ======================================================== ======================================== */}
-
       {/* ===================================================================================================== */}
       {/* ========================  Forms in React  =============================== */}
       {/* <Form /> */}
